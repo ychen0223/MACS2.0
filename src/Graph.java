@@ -23,10 +23,13 @@ public class Graph{
         ArrayList<String> visitedpath = new ArrayList();
         for(LinkedList<Node> currentList: alist) {
             for (Node node : currentList) {
-                if (node.Name == emotion && !visitedpath.contains(node.Name)) {
+                if (node.Name == emotion ) {
                     visitedpath.add(node.Name);
                     return visitedpath;
                 }
+                else if(node.Name != emotion && visitedpath.contains(node.Name)){
+
+                    }
                 else{
                     visitedpath.add(node.Name);
                 }
