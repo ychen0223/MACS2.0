@@ -23,7 +23,7 @@ public class Graph{
         ArrayList<String> visitedpath = new ArrayList();
         for(LinkedList<Node> currentList: alist) {
             for (Node node : currentList) {
-                if (node.Name == emotion) {
+                if (node.Name == emotion && !visitedpath.contains(node.Name)) {
                     visitedpath.add(node.Name);
                     return visitedpath;
                 }
@@ -34,6 +34,12 @@ public class Graph{
         }
         return visitedpath;
     }
+
+    /* Under-construction!
+    public ArrayList<String> DFS(String Emotion){
+    }
+
+     */
 
     public boolean checkEdge(int src, int dst) {
         LinkedList<Node> currentList = alist.get(src);
