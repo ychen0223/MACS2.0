@@ -1,5 +1,5 @@
 public class Node {
-    String Name;
+	String Name;
     int weight;
     boolean isvisited;
  
@@ -9,6 +9,9 @@ public class Node {
         this.weight = weight;
 
     }
+    public String getName() {
+    	return Name;
+    }
     
     void visited() {
     	isvisited = true;
@@ -17,4 +20,5 @@ public class Node {
     void unvisited() {
     	isvisited = false;
     }
+
 }

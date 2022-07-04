@@ -44,25 +44,29 @@ public class Graph{
 		Stack<String> stack = new Stack<>();  
 		
     	for(LinkedList<Node> currentlist: alist) {
-    		for(Node node: currentlist) {    			
-    			stack.push(node.Name);
+    		for(Node node: currentlist) {  
+    			String start = currentlist.get(0).getName();
+    			stack.push(start);
     			
     			
     			while(!stack.isEmpty()) {
 
-    				node.Name = stack.pop();
-    				   				
-    				if(node.isvisited == false) {
-    					System.out.println(node.Name);
+    				node.Name = stack.peek();   
+    				stack.pop();
+    				if(node.isvisited == false && node.Name != Emotion) {
+    					stack.push(node.Name);
     					node.visited();
     					//stack.push(node.Name);
-    					
     				}
-    				for(int i = 0; i < alist.size(); i++) {
-    					if(node.isvisited == false && node.Name == Emotion) {
-    						stack.push(node.Name);
-    					}
+    				if(node.isvisited == true) {
+						continue;
+					}
+    				
+    				if(node.isvisited == false && node.Name == Emotion) {
+    					System.out.println("Emotion found!");
+    					stack.push(node.Name);
     				}
+    				
     				
     				
     			} 			 				
