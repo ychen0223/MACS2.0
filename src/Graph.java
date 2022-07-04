@@ -38,11 +38,44 @@ public class Graph{
         return visitedpath;
     }
 
-    /* Under-construction!
-    public ArrayList<String> DFS(String Emotion){
-    }
+    // Under-construction!
+    public Stack<Node> dfs(String Emotion){
+    	
+		Stack<Node> stack = new Stack<Node>(); 
+		
+    	for(LinkedList<Node> currentlist: alist) {
+    		for(Node node: currentlist) {  
+    			node.unvisited();
+    			stack.push(node);
+    			
+    			while(!stack.isEmpty()) {
 
-     */
+    				 node = stack.pop();
+    				if(node.isvisited == false && node.getName() != Emotion) {
+    					
+        				System.out.println(node.Name + " ");
+        				node.visited();
+    						
+    				}
+    				if(node.isvisited == true && node.Name != Emotion) {
+    					continue;
+    				}
+
+    				List<Node> adjacent = node.getAdj();
+    				for(int i = 0; i < adjacent.size(); i++) {
+    					Node n = adjacent.get(i);
+    					if(n.isvisited == false && node.getName()== Emotion) {
+    						stack.push(n);
+    					}
+    				}
+    							
+    							    				    				
+    			} 			 				
+    				
+    		}
+    	}
+    	return stack;
+    		}
 
     public boolean checkEdge(int src, int dst) {
         LinkedList<Node> currentList = alist.get(src);
