@@ -45,26 +45,26 @@ public class Graph{
 		
     	for(LinkedList<Node> currentlist: alist) {
     		for(Node node: currentlist) {  
-    			
+    			node.unvisited();
     			stack.push(node);
     			
     			while(!stack.isEmpty()) {
 
-    				Node current = stack.pop();
-    				if(current.isvisited == false && current.getName() != Emotion) {
+    				 node = stack.pop();
+    				if(node.isvisited == false && node.getName() != Emotion) {
     					
-        				System.out.println(current.Name + " ");
-        				current.visited();
+        				System.out.println(node.Name + " ");
+        				node.visited();
     						
     				}
-    				if(current.isvisited == true) {
+    				if(node.isvisited == true && node.Name != Emotion) {
     					continue;
     				}
 
-    				List<Node> adjacent = current.getAdj();
+    				List<Node> adjacent = node.getAdj();
     				for(int i = 0; i < adjacent.size(); i++) {
     					Node n = adjacent.get(i);
-    					if(n.isvisited == false ) {
+    					if(n.isvisited == false && node.getName()== Emotion) {
     						stack.push(n);
     					}
     				}
