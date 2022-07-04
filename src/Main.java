@@ -36,7 +36,7 @@ public class Main {
         graph.addEdge(6,14);
 
         //adding keywords to the associated postive/negative keywords
-        System.out.println(graph.BFS("Very Positive")); //this will print the path the Anger in BFS order
+        System.out.println(graph.dfs("Very Positive")); //this will print the path the Anger in BFS order
     }
 
 }
