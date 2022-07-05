@@ -5,7 +5,7 @@ public class Main {
         database DB = new database();
         DB.InitialDataBase();
         DB.PrintBFSearch(DB.graph);
-
+        DB.PrintDFSearch(DB.graph);
         MyFrame frame = new MyFrame(DB);
 
     }

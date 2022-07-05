@@ -16,6 +16,8 @@ public class Node {
     public String getName() {
     	return Name;
     }
+
+
     
     void visited() {
     	isvisited = true;

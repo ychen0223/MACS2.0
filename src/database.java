@@ -3,6 +3,7 @@ public class database{
     Graph graph;
     public void InitialDataBase(){
         graph = new Graph();
+        //graph.addtoHolder();
 
         //fixed data tree structure! don't change if have to;
         graph.addNode(new Node("Emotion", 0));//0
@@ -40,4 +41,8 @@ public class database{
     public void PrintBFSearch(Graph graph){
         System.out.println(graph.BFS("Very Positive"));
     }
+    public void PrintDFSearch(Graph graph){
+        graph.dfs("Ok Positive");
+    }
+
 }
