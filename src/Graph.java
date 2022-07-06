@@ -1,6 +1,10 @@
 
 import java.util.*;
 public class Graph {
+	
+	LinkedList<String> path;
+	boolean found;
+	
     static ArrayList<LinkedList<Node>> alist;
     LinkedList<Node> Visited = new LinkedList<>();
     static ArrayList<String> beenthere = new ArrayList<>();
@@ -50,7 +54,60 @@ public class Graph {
         }
         return visitedpath;
     }
+    
+    private LinkedList<Node> getCorrLinkList(Node node) {
+    	for(LinkedList<Node> list : alist) {
+    		if(list.get(0) == node) {
+    			return list;
+    		}
+    	}
+    	return null;
+    	
+    }
+    
 
+    public LinkedList<String> DFS (String emotion) {
+    	// set all nodes to unvisited
+    	found = false;
+    	path = new LinkedList<String>();
+    	DFShelper(alist.get(0).get(0), emotion);
+    	return path;
+    	
+    }
+    
+    public void DFShelper (Node node, String emotion) {  	
+    	if(found) {
+    		return;
+    	}
+    	node.visited();
+    	path.add(node.Name);
+    	if(node.Name.equals(emotion)) {
+    		System.out.println(path);
+    		found = true;
+    	}
+    	LinkedList<Node> currList = getCorrLinkList(node);
+		int currListSize = currList.size();
+		if(currListSize >  1) {
+			for(int i = 1; i < currList.size(); i++) {
+				if(!(currList.get(i)).isvisited) {
+					DFShelper(currList.get(i), emotion);
+				}
+				
+			}
+		}
+		path.removeLast();
+		
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+/*
     // Under-construction!
     //int i = 1; //dst
     //int x = 0; //src
@@ -116,38 +173,7 @@ public class Graph {
     }
 
 
-
-		/*Stack<Node> stack = new Stack<Node>();
-        stack.push(GetNode(0,0));
-        System.out.println(stack.get(0).Name);
-        System.out.println(checkEdge(0,0));
-
-        System.out.println(current.Name);
-        System.out.println(next.Name);
-
-            /*while(!stack.isEmpty()) {
-    				 node = stack.pop();
-    				if(node.isvisited == false && node.getName() != Emotion) {
-
-        				System.out.println(node.Name + " ");
-        				node.visited();
-
-    				}
-    				if(node.isvisited == true && node.Name != Emotion) {
-    					continue;
-    				}
-
-    				List<Node> adjacent = node.getAdj();
-    				for(int i = 0; i < adjacent.size(); i++) {
-    					Node n = adjacent.get(i);
-    					if(n.isvisited == false && node.getName()== Emotion) {
-    						stack.push(n);
-    					}
-    				}
-    		}
-    	}
-
-    			 */
+*/
 
 
         public static boolean nochildren(int src){

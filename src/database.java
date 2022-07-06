@@ -36,13 +36,15 @@ public class database{
         graph.addEdge(5,12);
         graph.addEdge(6,13);//parent ok Negative;
         graph.addEdge(6,14);
+        
     }
+    
 
     public void PrintBFSearch(Graph graph){
         System.out.println(graph.BFS("Very Positive"));
     }
     public void PrintDFSearch(Graph graph){
-        graph.dfs("Ok Positive");
+       graph.DFS("Happiness"); 
     }
 
 }
