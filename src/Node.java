@@ -2,11 +2,11 @@ import java.util.*;
 
 
 public class Node {
-	String Name;
+    String Name;
     int weight;
     boolean isvisited;
     List<Node> adjacent;
-    
+
     Node(String Info, int weight){
         this.Name = Info;
         this.weight = weight;
@@ -14,20 +14,20 @@ public class Node {
 
     }
     public String getName() {
-    	return Name;
+        return Name;
     }
 
 
-    
+
     void visited() {
-    	isvisited = true;
+        isvisited = true;
     }
-    
+
     void unvisited() {
-    	isvisited = false;
+        isvisited = false;
     }
     public List<Node> getAdj(){
-    	return adjacent;
+        return adjacent;
     }
 
 }
