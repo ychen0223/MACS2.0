@@ -147,10 +147,10 @@ public class Graph {
 
     public void OkBadSuggestion(){
         ArrayList<String> news = new ArrayList<>();
-        news.add("OkBadSuggestion");
-        news.add("OkBadSuggestion!");
-        news.add("OkBadSuggestion");
-        news.add("OkBadSuggestion");
+        news.add("I know you might not be feeling your best right now, but know that you matter and it will all be okay!");
+        news.add("Try going on a walk! It will hopefully clear your mind.");
+        news.add("Dont worry, you will get past this. You got it!");
+        news.add("Why dont you try going out and try meeting new people? It will help you feel better.");
 
         System.out.println(news.get(rand()));
     }
@@ -158,9 +158,9 @@ public class Graph {
     public void BadSuggestion(){
         ArrayList<String> news = new ArrayList<>();
         news.add("I hope you feel better soon! here is a stand up show that will bring joy to you!");
-        news.add("Hop on computer, your friends are waiting for you");
-        news.add("Go for a run, soon you will realize your physical health is worst than your mental health lol");
-        news.add("Grandma made you food! check out your refrigerator");
+        news.add("Hop on computer, your friends are waiting for you!");
+        news.add("Go for a run, if you feel better physcally you will feel better mentally too!");
+        news.add("Try reading a book, it will take you to a better place mentally!");
 
         System.out.println(news.get(rand()));
     }
