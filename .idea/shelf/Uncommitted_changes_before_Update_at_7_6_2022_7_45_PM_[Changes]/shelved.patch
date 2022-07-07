@@ -1,0 +1,73 @@
+Index: main.java
+===================================================================
+diff --git a/main.java b/main.java
+deleted file mode 100644
+--- a/main.java	(revision f64b6992e4efa567d1f23e8e880782fec20c4cf8)
++++ /dev/null	(revision f64b6992e4efa567d1f23e8e880782fec20c4cf8)
+@@ -1,23 +0,0 @@
+-import java.awt.Color;
+-import javax.swing.JFrame;
+-import javax.swing.ImageIcon;
+-
+-public class Main {
+-	
+-	public static void main(String[] args) {
+-		JFrame frame = new JFrame(); //creates frame
+-      		frame.setTitle("MACS GUI"); //title of frame
+-      		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application;
+-      		//DO_NOTHING_ON_CLOSE; they can not close out of gui
+-      		frame.setResizable(false); //dont allow frame from being resized
+-      		frame.setSize(420,420); //size of the frame
+-      		frame.setVisible(true); //make frame visible
+-      		frame.getContentPane().setBackground(new Color(153, 204, 255)); //color of background
+-      		//(new Color(0,0,0) range of 0 to 255 or (new Color(0xFFFFFF) or (Color.blue) 
+-            	//[153, 204, 255; baby blue]
+-      		
+-      		ImageIcon image = new ImageIcon(""); //create the image icon
+-            	frame.setIconImage(image.getImage()); //change icon of the frame
+-
+-	}
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"88db8c6d-e8ae-4e6f-b4e4-7e0e19671061\" name=\"Changes\" comment=\"BFS update\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Graph.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Graph.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Node.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Node.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/database.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/database.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2B6VtzhgubVqheOTg0QhoBYpkCj\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\a7519\\IdeaProjects\\MAC2.0\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Unnamed\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"MAC2.0\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"88db8c6d-e8ae-4e6f-b4e4-7e0e19671061\" name=\"Changes\" comment=\"\" />\r\n      <created>1656226740585</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1656226740585</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"BFS update\">\r\n      <created>1656303626816</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656303626816</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"BFS update\">\r\n      <created>1656559585459</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656559585459</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"BFS update\">\r\n      <created>1656559962731</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656559962731</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"BFS update\">\r\n      <created>1656968613263</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656968613263</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"BFS update\">\r\n      <created>1656969477711</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656969477711</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"BFS update\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"BFS update\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f64b6992e4efa567d1f23e8e880782fec20c4cf8)
++++ b/.idea/workspace.xml	(date 1657161769532)
+@@ -3,10 +3,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="88db8c6d-e8ae-4e6f-b4e4-7e0e19671061" name="Changes" comment="BFS update">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,12 +35,15 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\a7519\IdeaProjects\MAC2.0\src" />
