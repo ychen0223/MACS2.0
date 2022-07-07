@@ -8,6 +8,7 @@ public class MyFrame extends JFrame implements ActionListener {
     JTextField Input;
     JTextField Display;
     MyFrame(database DB) {
+        this.setTitle("IRIS Mental Health");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //JFrame;
         this.setLayout(new BorderLayout());
         this.setSize(400,440);
