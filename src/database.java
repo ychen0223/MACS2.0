@@ -128,7 +128,7 @@ public class database{
         System.out.println(graph.BFS("Very Positive"));
     }
     public void PrintDFSearch(Graph graph){
-       graph.DFS("Happiness"); 
+       graph.DFS("Happy"); 
     }
 
 }
