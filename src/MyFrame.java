@@ -11,6 +11,7 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //JFrame;
         this.setLayout(new BorderLayout());
         this.setSize(400,440);
+        this.setResizable(false); //doesn't allow the frame to be resized
         JTextField Input = new JTextField();
         Input.setPreferredSize(new Dimension(300, 40));
         Input.setFont(new Font("Consolas", Font.PLAIN, 35));
