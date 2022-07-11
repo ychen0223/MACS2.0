@@ -62,8 +62,6 @@ public class Graph {
     }
     
     private LinkedList<Node> getCorrLinkList(Node node) {
-    	LinkedList<Node> dummie = new LinkedList<>();
-
         for(LinkedList<Node> list : alist) {
     		if(list.get(0) == node) {
     			return list;
@@ -90,9 +88,10 @@ public class Graph {
     	path.add(node.Name);
     	if(node.Name.equalsIgnoreCase(emotion)) {
 
-    		System.out.println(path);
+    		//System.out.println("The Depth First Search Path is as follows: "+ path);
+            System.out.println("DFS Path: "+ path);
 
-    		if(path.contains("Ok Negative")){
+            if(path.contains("Ok Negative")){
                 OkBadSuggestion();
             } else if (path.contains("Very Negative")) {
                 BadSuggestion();
@@ -114,7 +113,7 @@ public class Graph {
 				
 			}
 		}
-        path.removeLast();
+        //path.removeLast();
 		
     }
     
@@ -124,45 +123,46 @@ public class Graph {
         int x = random.nextInt(3);
         return x;
     }
-    
-    public void GoodSuggestion(){
+
+    public void GoodSuggestion(){ //Very Good Suggestion;
         ArrayList<String> news = new ArrayList<>();
         news.add("I am happy for you! Maybe you should go for a hike!");
         news.add("WOOOH, you should drag your friends out for shopping!");
         news.add("Nice! Share your mood with your families and friends!");
         news.add("Ain't that nice! keep up the motivation and go for a run!");
-
+        System.out.println(" ");
         System.out.println(news.get(rand()));
     }
 
-    public void OkGoodSuggestion(){
+    public void OkGoodSuggestion(){//Good Suggestion;
         ArrayList<String> news = new ArrayList<>();
         news.add("Do a bubble bath! its fun :)");
         news.add("Think about your future! you are on track, stay precision and you are close to your goals!");
         news.add("I see you like Taylor Swift, you should check out her folklore album!");
         news.add("Thinking about past trips, your trip with alex to Hawaii was amazing!");
-
+        System.out.println(" ");
         System.out.println(news.get(rand()));
     }
 
-    public void OkBadSuggestion(){
+    public void OkBadSuggestion(){//Ok Negative Suggestion;
         ArrayList<String> news = new ArrayList<>();
-        news.add("OkBadSuggestion");
-        news.add("OkBadSuggestion!");
-        news.add("OkBadSuggestion");
-        news.add("OkBadSuggestion");
-
+        news.add("I know you might not be feeling your best right now, but know that you matter and it will all be okay!");
+        news.add("Try going on a walk! It will hopefully clear your mind.");
+        news.add("Dont worry, you will get past this. You got it!");
+        news.add("Why dont you try going out and try meeting new people? It will help you feel better.");
+        System.out.println(" ");
         System.out.println(news.get(rand()));
     }
 
-    public void BadSuggestion(){
+    public void BadSuggestion(){//Very Negative Suggestion;
         ArrayList<String> news = new ArrayList<>();
         news.add("I hope you feel better soon! here is a stand up show that will bring joy to you!");
-        news.add("Hop on computer, your friends are waiting for you");
-        news.add("Go for a run, soon you will realize your physical health is worst than your mental health lol");
-        news.add("Grandma made you food! check out your refrigerator");
-
+        news.add("Hop on computer, your friends are waiting for you!");
+        news.add("Go for a run, if you feel better physcally you will feel better mentally too!");
+        news.add("Try reading a book, it will take you to a better place mentally!");
+        System.out.println(" ");
         System.out.println(news.get(rand()));
+
     }
     
     
@@ -234,8 +234,6 @@ public class Graph {
 
 
 */
-
-
         public static boolean nochildren(int src){
         LinkedList<Node> currentList = alist.get(src);
         if(currentList.size() == 1)

@@ -129,16 +129,22 @@ public class database{
     }
 
 
-    public ArrayList<String> PrintBFSearch(Graph graph){
-        return graph.BFS("Sorry");
+    public ArrayList<String> PrintBFSearch(Graph grap,String word){
+        return graph.BFS(word);
     }
-    public LinkedList<String> PrintDFSearch(Graph graph){
-        return graph.DFS("sorry");
+    public LinkedList<String> PrintDFSearch(Graph graph,String word){
+
+        return graph.DFS(word);
+
     }
 
-    public void PrintEverything(Graph graph){
+    /*public void PrintEverything(Graph graph, String searchword){
         //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
         System.out.println(graph.BFS("sorry"));
-        graph.DFS("Sorry");
+        graph.DFS("Caring");
     }
+    public void PrintResponseOnly(Graph graph, String searchword){
+        //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
+        graph.DFS("searchword");
+    }*/
 }
