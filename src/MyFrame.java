@@ -24,12 +24,12 @@ public class MyFrame extends JFrame implements ActionListener {
         ImageIcon image = new ImageIcon("macs-icon.png"); //create the image icon
         this.setIconImage(image.getImage()); //change icon of the frame
 
-        //cardd
+        //card
         JPanel panel = new JPanel();
         SpringLayout layout = new SpringLayout();
 
         JLabel label = new JLabel("How are you feeling today?");
-        JTextField text = new JTextField("Text Field", 15);
+        JTextField text = new JTextField("Text Field", 10);
         panel.setSize(200, 200);
         panel.setLayout(layout);
         panel.add(label);
@@ -40,6 +40,16 @@ public class MyFrame extends JFrame implements ActionListener {
 
         layout.putConstraint(SpringLayout.WEST, text, 5, SpringLayout.EAST, label);
         layout.putConstraint(SpringLayout.NORTH, text, 5, SpringLayout.NORTH, panel);
+
+        JPanel panel2 = new JPanel();
+        JLabel label2 = new JLabel("Here is our advice for you:");
+        panel.setSize(200, 200);
+        panel.setLayout(layout);
+        panel.add(label);
+
+        layout.putConstraint(SpringLayout.WEST, label2, 5, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, label2, 10, SpringLayout.NORTH, panel);
+
 
         //JTextField Display = new JTextField();
         //Display.setPreferredSize(new Dimension(400, 400));
