@@ -1,3 +1,8 @@
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+
 public class database{
 
     Graph graph;
@@ -61,9 +66,9 @@ public class database{
         graph.addNode(new Node("Distant", 0));//52
         graph.addNode(new Node("Troubled", 0));//53
         graph.addNode(new Node("Sorry", 0));//54
-        
-        
-        
+
+
+
         graph.addEdge(0,1); //root:emotion
         graph.addEdge(0,2); //
         graph.addEdge(1,3); //parent: positive;
@@ -105,10 +110,10 @@ public class database{
         graph.addEdge(5,39);
         graph.addEdge(5,40);
         graph.addEdge(5,41);
-        graph.addEdge(5,42);  
+        graph.addEdge(5,42);
         graph.addEdge(6,43); //start from ok negative
-        graph.addEdge(6,44); 
-        graph.addEdge(6,45); 
+        graph.addEdge(6,44);
+        graph.addEdge(6,45);
         graph.addEdge(6,46);
         graph.addEdge(6,47);
         graph.addEdge(6,48);
@@ -118,17 +123,28 @@ public class database{
         graph.addEdge(6,52);
         graph.addEdge(6,53);
         graph.addEdge(6,54);
-        
-       
-        
-    }
-    
 
-    public void PrintBFSearch(Graph graph){
-        System.out.println(graph.BFS("Very Positive"));
-    }
-    public void PrintDFSearch(Graph graph){
-       graph.DFS("Happy"); 
+
+
     }
 
+
+    public ArrayList<String> PrintBFSearch(Graph grap,String word){
+        return graph.BFS(word);
+    }
+    public LinkedList<String> PrintDFSearch(Graph graph,String word){
+
+        return graph.DFS(word);
+
+    }
+
+    /*public void PrintEverything(Graph graph, String searchword){
+        //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
+        System.out.println(graph.BFS("sorry"));
+        graph.DFS("Caring");
+    }
+    public void PrintResponseOnly(Graph graph, String searchword){
+        //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
+        graph.DFS("searchword");
+    }*/
 }

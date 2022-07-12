@@ -8,7 +8,8 @@ public class MyFrame extends JFrame implements ActionListener {
     JPanel cards; //panel that uses cards layout
     JTextField Input;
     JTextField Display;
-    MyFrame(database DB) {
+    database DB = new database();
+    MyFrame() {
         this.setTitle("IRIS Mental Health");
         //this.getContentPane().setBackground(new Color(0, 51, 102));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //JFrame;
@@ -62,10 +63,22 @@ public class MyFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button) {
-            Input.getText();
-           // DB.InitialDataBase();
-           // DB.PrintBFSearch(DB.graph);
+            String Sentence = Input.getText();
+            DB.InitialDataBase();
+            String[] listofWord = chopdownthesentence(Sentence);
+            for(String word:listofWord){
+               // DB.PrintDFSearch(DB.graph);
+            }
         }
+    }
+
+    public static String[] chopdownthesentence(String Sentence){
+        String words[] = Sentence.split(" ");
+        /*System.out.println("Number of words: " + words.length);
+        for(int i = 0; i  <words.length; i++){
+            System.out.println("word["+i+"] = " + words[i]);
+        }*/
+        return words;
     }
 }
 
