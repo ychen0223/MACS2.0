@@ -6,6 +6,7 @@ import java.util.LinkedList;
 public class database{
 
     Graph graph;
+
     public void InitialDataBase(){
         graph = new Graph();
         //graph.addtoHolder();
@@ -146,5 +147,26 @@ public class database{
     public void PrintResponseOnly(Graph graph, String searchword){
         //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
         graph.DFS("searchword");
+    }
+
+    public static String[] chopdownthesentence(String Sentence){
+        String words[] = Sentence.split(" ");
+        /*System.out.println("Number of words: " + words.length);
+        for(int i = 0; i  <words.length; i++){
+            System.out.println("word["+i+"] = " + words[i]);
+        }*/
+        return words;
+    }
+
+    public int IfkeywordFound(String[] pool, ArrayList libary){
+        int i = 0;
+        while(i !=  pool.length) {
+            if (libary.contains(pool[i])) {
+                return i;
+            } else {
+                i = 999;
+            }
+        }
+        return i;
     }
 }
