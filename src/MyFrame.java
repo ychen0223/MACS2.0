@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame implements ActionListener {
     JButton button;
+    JPanel cards; //panel that uses cards layout
     JTextField Input;
     JTextField Display;
     database DB = new database();
@@ -23,21 +24,50 @@ public class MyFrame extends JFrame implements ActionListener {
         ImageIcon image = new ImageIcon("macs-icon.png"); //create the image icon
         this.setIconImage(image.getImage()); //change icon of the frame
 
-        JTextField Display = new JTextField();
-        Display.setPreferredSize(new Dimension(400, 400));
-        Display.setFont(new Font("Calibri", Font.PLAIN, 35));
-        Display.setForeground(Color.black);
-        Display.setEditable(false);
+        //card
+        JPanel panel = new JPanel();
+        SpringLayout layout = new SpringLayout();
 
-        JButton button = new JButton("Submit");
-        button.setSize(100,40);
-        button.addActionListener(this);
-        this.add(Display, BorderLayout.NORTH);
-        this.add(Input, BorderLayout.WEST);
-        this.add(button,BorderLayout.EAST);
+        JLabel label = new JLabel("How are you feeling today?");
+        JTextField text = new JTextField("Text Field", 10);
+        panel.setSize(200, 200);
+        panel.setLayout(layout);
+        panel.add(label);
+        panel.add(text);
 
-        this.pack();
+        layout.putConstraint(SpringLayout.WEST, label, 5, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, label, 5, SpringLayout.NORTH, panel);
+
+        layout.putConstraint(SpringLayout.WEST, text, 5, SpringLayout.EAST, label);
+        layout.putConstraint(SpringLayout.NORTH, text, 5, SpringLayout.NORTH, panel);
+
+        JPanel panel2 = new JPanel();
+        JLabel label2 = new JLabel("Here is our advice for you:");
+        panel.setSize(200, 200);
+        panel.setLayout(layout);
+        panel.add(label);
+
+        layout.putConstraint(SpringLayout.WEST, label2, 5, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, label2, 10, SpringLayout.NORTH, panel);
+
+
+        //JTextField Display = new JTextField();
+        //Display.setPreferredSize(new Dimension(400, 400));
+        //Display.setFont(new Font("Calibri", Font.PLAIN, 35));
+        //Display.setForeground(Color.black);
+        //Display.setEditable(false);
+
+        //JButton button = new JButton("Submit");
+        //button.setSize(100,40);
+        //button.addActionListener(this);
+        //this.add(Display, BorderLayout.NORTH);
+        //this.add(Input, BorderLayout.WEST);
+        //this.add(button,BorderLayout.EAST);
+
+        //this.pack();
         this.setVisible(true);
+        this.add(panel);
+        //this.pack();
     }
 
     @Override
