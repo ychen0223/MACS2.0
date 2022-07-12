@@ -46,10 +46,10 @@ public class Graph {
         String holder = "";
         for (LinkedList<Node> currentList : alist) {
             for (Node node : currentList) {
-                if (node.Name == emotion) {
+                if (node.Name.equalsIgnoreCase(emotion)) {
                     visitedpath.add(node.Name);
                     return visitedpath;
-                } else if (node.Name != emotion && visitedpath.contains(node.Name)) {
+                } else if (!node.Name.equalsIgnoreCase(emotion) && visitedpath.contains(node.Name)) {
 
                 } else {
                     visitedpath.add(node.Name);
@@ -245,16 +245,6 @@ public class Graph {
         }
     }
 
-    public static boolean checkEdge(int src, int dst) {
-        LinkedList<Node> currentList = alist.get(src);
-        Node destnode = alist.get(dst).get(0);
-        for (Node node : currentList) {
-            if (node == destnode) {
-                return true;
-            }
-        }
-        return false;
-    }
         public void print () {
          for(LinkedList<Node> currentList: alist){
              for(Node node: currentList){
@@ -262,9 +252,6 @@ public class Graph {
              }
              System.out.println(" ");
         }
-
-
-         
     }
 
     public static Node GetNode(int level, int nodeNum) {

@@ -138,7 +138,7 @@ public class database{
 
     }
 
-    /*public void PrintEverything(Graph graph, String searchword){
+    public void PrintEverything(Graph graph, String searchword){
         //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
         System.out.println(graph.BFS("sorry"));
         graph.DFS("Caring");
@@ -146,5 +146,5 @@ public class database{
     public void PrintResponseOnly(Graph graph, String searchword){
         //ArrayList<String> arrayList = new ArrayList<>(graph.DFS("sorry"));
         graph.DFS("searchword");
-    }*/
+    }
 }
